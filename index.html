@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Title -->
+  <title>WDD131-Dynamic Web Fundamentals-Emmanuel Edahe Alexander</title>
+
+  <!-- Meta description (includes course, name, and keywords) -->
+  <meta name="description" content="WDD 131 – Dynamic Web Fundamentals | Emmanuel Edahe Alexander | Web development, HTML, CSS, JavaScript, responsive design, student project.">
+
+  <!-- Author -->
+  <meta name="author" content="Emmanuel Edahe Alexander">
+  <link rel="stylesheet" href="styles/base.css">
+</head>
+<body>
+  <header>
+    <!-- Course title -->
+    <span id="course-title">WDD 131 – Dynamic Web Fundamentals</span>
+
+    <!-- Navigation menu -->
+    <nav>
+      <ul>
+        <li><a href="https://www.linkedin.com/" target="_blank">LinkedIn</a></li>
+        <li><a href="https://byupw.instructure.com/" target="_blank">Canvas</a></li>
+        <li><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/3?lang=eng&id=p7#p7" target="_blank">Favorite Scripture</a></li>
+        <li><a href="#">Final Project</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Student name -->
+    <h1>Emmanuel Edahe Alexander</h1>
+
+    <!-- Section 1 -->
+    <section class="card">
+        <h2>About Me</h2>
+        <img src="images/emma1.jpg" alt="Photo of Emmanuel Edahe Alexander" width="300" height="200">
+      <p>Hello!My name is Emmanuel Edache Alexander, and I am a Nigerian student at BYU–Idaho, studying Web Development
+          online. Learning and practicing web development has been a challenge for me because I do not yet have a good
+          computer, which makes it harder to complete my assignments and projects. Even with this struggle,
+          I am determined to keep learning and improving my skills. My zeal for technology and my desire to 
+          grow in this field keep me motivated, and I believe that with persistence and faith, I can overcome 
+          these obstacles and achieve my goals..</p>
+        </section>
+
+    <!-- Section 2 -->
+    <section class="card">
+      <h2>My Hobbies</h2>
+      <img src="images/emma.jpg" alt="An image representing one of my hobbies" width="300" height="200">
+      <p>I find great joy in volleyball and teaching, two passions that might seem different but actually complement each other well.
+          Volleyball challenges me physically and mentally—it teaches teamwork, strategy, quick decision-making, and the 
+          discipline to keep improving with every game. 
+          Teaching, on the other hand, allows me to share knowledge, inspire 
+          others, and build confidence in those I guide. Both hobbies push me to connect with people, communicate clearly,
+          and grow as a leader. Whether I am on the court or in a learning environment, I feel energized, purposeful, and
+          motivated to become the best version of myself while helping others do the same..</p>
+    </section>
+  </main>
+
+  <footer>
+    <!-- Copyright info -->
+    <p>&copy; <span id="currentyear"></span> | Emmanuel Edahe Alexander | Nigeria</p>
+    
+    <!-- Last modified date -->
+    <p id="lastModified"></p>
+  </footer>
+
+  <!-- JavaScript to update year and last modified -->
+  <script>
+   // Get the current year and display it in the footer
+const currentYear = new Date().getFullYear();
+document.getElementById("currentyear").textContent = currentYear;
+
+// Get the last modified date of the document and display it in the footer
+const lastModified = document.lastModified;
+document.getElementById("lastModified").textContent = `Last Modified: ${lastModified}`;
+
+  </script>
+</body>
+</html>
