@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paris, France</title>
+  <link rel="stylesheet" href="styles/place.css">
+  <script src="scripts/place.js" defer></script>
+</head>
+<body>
+  <!-- ===== HEADER ===== -->
+  <header>
+    <h1>Paris, France</h1>
+    <nav>
+      <ul>
+        <li><a href="#">History</a></li>
+        <li><a href="#">Culture</a></li>
+        <li><a href="#">Weather</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ===== MAIN ===== -->
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <picture>
+        <source srcset="images/paris-small.webp" media="(max-width: 500px)">
+        <source srcset="images/paris-medium.webp" media="(max-width: 1000px)">
+        <img src="images/paris-large.webp" alt="Eiffel Tower in Paris" width="1200" height="500">
+      </picture>
+    </section>
+
+    <!-- About -->
+    <section class="about card">
+      <h2>About Paris</h2>
+      <p>
+        Paris is the capital of France, often called <em>The City of Light</em>. 
+        It is famous for its rich history, world-class art, fashion, and cuisine. 
+        With landmarks such as the Eiffel Tower, the Louvre, and the Notre-Dame Cathedral, 
+        Paris is one of the most visited cities in the world.
+      </p>
+    </section>
+
+    <!-- Weather -->
+    <section class="weather card">
+      <h2>Weather</h2>
+      <p><strong>Temperature:</strong> <span id="temperature">5</span> °C</p>
+      <p><strong>Wind Speed:</strong> <span id="windspeed">15</span> km/h</p>
+      <p><strong>Wind Chill:</strong> <span id="windchill"></span></p>
+      <div class="weather-icon">
+        <img src="images/weather.svg" alt="Weather Icon">
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <!-- Copyright info -->
+    <p>&copy; <span id="currentyear"></span> | Emmanuel Edahe Alexander | Nigeria</p>
+    
+    <!-- Last modified date -->
+    <p id="lastModified"></p>
+  </footer>
+
+  <!-- JavaScript to update year and last modified -->
+  <script>
+   // Get the current year and display it in the footer
+const currentYear = new Date().getFullYear();
+document.getElementById("currentyear").textContent = currentYear;
+
+// Get the last modified date of the document and display it in the footer
+const lastModified = document.lastModified;
+document.getElementById("lastModified").textContent = `Last Modified: ${lastModified}`;
+
+  </script>
+</body>
+</html>
