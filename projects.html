@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="description" content="EDACHE'S EXCELLENCE PLUMBING — Industrial and commercial plumbing installations, pumps, drainage systems, emergency repairs and planned maintenance." />
-  <title>EDACHE'S EXCELLENCE PLUMBING SERVICES</title>
+  <meta name="description" content="Portfolio and project gallery for EDACHE'S EXCELLENCE PLUMBING large-scale installations." />
+  <title>EDACHE'S EXCELLENCE PLUMBING — Projects</title>
   <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
@@ -13,9 +13,7 @@
   <header class="site-header" role="banner">
     <div class="container header-inner">
       <div class="brand">
-        <div class="logo" aria-hidden="true">
-          <img src="images/logo.png" alt="EDACHE'S EXCELLENCE PLUMBING Logo" height="60">
-        </div>
+        <img src="images/LOGO.png" alt="EDACHE'S EXCELLENCE PLUMBING Logo" class="logo">
         <div>
           <h1 class="site-title">EDACHE'S EXCELLENCE PLUMBING</h1>
           <p class="tagline">Industrial &amp; Commercial Plumbing Solutions</p>
@@ -39,40 +37,17 @@
   </header>
 
   <main id="main" class="container">
-    <section class="hero card" aria-labelledby="hero-title">
-      <div class="hero-content">
-        <p class="eyebrow">Industrial Plumbing • 24/7 Emergency • Site Compliance</p>
-        <h2 id="hero-title">Solutions for large-scale &amp; industrial plumbing projects</h2>
-        <p class="lead">EDACHE'S EXCELLENCE PLUMBING provides turnkey plumbing systems — from design, fabrication, and installation to commissioning and maintenance. Safety, uptime, and compliance are built into every project.</p>
-        <p>
-          <a class="btn" href="services.html">Explore Services</a>
-          <a class="btn ghost" href="contact.html">Request a Quote</a>
-        </p>
-      </div>
+    <article class="card" aria-labelledby="projects-title">
+      <h2 id="projects-title">Project Portfolio</h2>
+      <p class="muted">Below are selected, completed works showcasing our large-scale installations.</p>
 
-      <figure class="hero-figure" aria-hidden="false">
-        <!-- hero image loads normally; supporting/gallery images below fold use lazy -->
-        <img src="images/hero-plant.jpg" alt="Industrial piping and pumps installed at a plant" width="900" height="520">
-        <figcaption class="visually-hidden">Industrial piping and pump installation</figcaption>
-      </figure>
-    </section>
-
-    <section class="card" aria-labelledby="services-preview">
-      <h3 id="services-preview">Key Capabilities</h3>
-      <div class="services-grid" id="services-grid">
-        <!-- Services populated by scripts for semantic & consistent output -->
+      <div id="projects-gallery" class="projects-grid">
+        <!-- populated by script.js using projects array and lazy loading -->
       </div>
-    </section>
-
-    <section class="card" aria-labelledby="projects-preview">
-      <h3 id="projects-preview">Selected Projects</h3>
-      <div class="projects-grid" id="projects-grid">
-        <!-- Projects populated by scripts -->
-      </div>
-    </section>
+    </article>
   </main>
 
-   <footer class="site-footer" role="contentinfo">
+    <footer class="site-footer" role="contentinfo">
     <div class="container footer-inner">
       <!-- Separator Line -->
       <hr class="footer-separator">
