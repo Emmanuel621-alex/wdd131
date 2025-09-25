@@ -1,0 +1,46 @@
+.footer-separator {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 1rem 0;
+}
+
+.site-footer {
+  background: #f8f9fa;
+  padding: 1rem 0;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between; /* push left and right sides */
+  align-items: center;
+  flex-wrap: wrap; /* makes it responsive on small screens */
+  gap: 1rem;
+}
+
+.footer-left p,
+.footer-right p {
+  margin: 0;
+}
+
+.footer-right {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem; /* space between references link and social icons */
+}
+
+.social-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-icon {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.3s ease;
+  filter: invert(20%) sepia(10%) saturate(500%) hue-rotate(200deg) brightness(90%);
+}
+
+.social-icon:hover {
+  transform: scale(1.2);
+  filter: invert(10%) sepia(90%) saturate(2000%) hue-rotate(190deg) brightness(95%);
+}
