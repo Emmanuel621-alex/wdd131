@@ -3,13 +3,22 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="description" content="Careers at EDACHE'S EXCELLENCE PLUMBING — apply for plumber, fabricator, or project manager positions." />
+  <meta name="description" content="Careers at EDACHE'S EXCELLENCE PLUMBING — Apply for plumber, fabricator, or project manager positions." />
   <title>EDACHE'S EXCELLENCE PLUMBING — Careers</title>
   <link rel="stylesheet" href="styles/styles.css">
+  <style>
+    /* Show red asterisk for required fields */
+    form label.required::after {
+      content: " *";
+      color: red;
+      font-weight: bold;
+    }
+  </style>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
+  <!-- Header -->
   <header class="site-header" role="banner">
     <div class="container header-inner">
       <div class="brand">
@@ -23,39 +32,57 @@
       <nav class="main-nav" role="navigation" aria-label="Main navigation">
         <button id="mobile-toggle" aria-controls="primary-menu" aria-expanded="false" aria-label="Open menu">☰</button>
         <ul id="primary-menu" class="menu">
-          <li><a href="index.html" data-page="home" class="nav-link">Home</a></li>
-          <li><a href="about.html" data-page="about" class="nav-link">About</a></li>
-          <li><a href="services.html" data-page="services" class="nav-link">Services</a></li>
-          <li><a href="projects.html" data-page="projects" class="nav-link">Projects</a></li>
-          <li><a href="contact.html" data-page="contact" class="nav-link">Contact</a></li>
-          <li><a href="testimonials.html" data-page="testimonials" class="nav-link">Testimonials</a></li>
-          <li><a href="careers.html" data-page="careers" class="nav-link">Careers</a></li>
-          <li><a href="references.html" data-page="references" class="nav-link">References</a></li>
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="services.html" class="nav-link">Services</a></li>
+          <li><a href="projects.html" class="nav-link">Projects</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+          <li><a href="testimonials.html" class="nav-link">Testimonials</a></li>
+          <li><a href="careers.html" class="nav-link active">Careers</a></li>
+          <li><a href="references.html" class="nav-link">References</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
+  <!-- Main -->
   <main id="main" class="container">
     <article class="card" aria-labelledby="careers-title">
       <h2 id="careers-title">Careers — Join Our Team</h2>
 
-      <p class="muted">We hire experienced industrial plumbers, fabricators and project managers. Submit a short application below.</p>
+      <p class="muted">
+        We are looking for skilled <strong>plumbers</strong>, <strong>fabricators</strong>, 
+        and <strong>project managers</strong>. Fill out the application form below to apply.
+      </p>
 
-      <form id="careers-form" class="form" novalidate>
+      <!-- Careers Form -->
+      <form id="careers-form" class="form"
+            action="https://formspree.io/f/mvgwgjbp"
+            method="POST"
+            novalidate>
+        
         <div class="form-row">
-          <label for="a-name">Full name</label>
-          <input id="a-name" name="name" type="text" required>
+          <label for="a-name" class="required">Full Name</label>
+          <input id="a-name" name="name" type="text"
+                 placeholder="Enter your full name"
+                 autocomplete="name"
+                 required aria-required="true"
+                 minlength="3" maxlength="80">
         </div>
 
         <div class="form-row">
-          <label for="a-email">Email</label>
-          <input id="a-email" name="email" type="email" required>
+          <label for="a-email" class="required">Email</label>
+          <input id="a-email" name="email" type="email"
+                 placeholder="you@example.com"
+                 autocomplete="email"
+                 required aria-required="true">
         </div>
 
         <div class="form-row">
-          <label for="a-position">Position applying for</label>
-          <select id="a-position" name="position" required>
+          <label for="a-position" class="required">Position Applying For</label>
+          <select id="a-position" name="position"
+                  required aria-required="true">
+            <option value="" disabled selected>-- Select a position --</option>
             <option value="plumber">Plumber</option>
             <option value="fabricator">Fabricator</option>
             <option value="pm">Project Manager</option>
@@ -63,22 +90,24 @@
         </div>
 
         <div class="form-row">
-          <label for="a-summary">Brief experience summary</label>
-          <textarea id="a-summary" name="summary" rows="5" required></textarea>
+          <label for="a-summary" class="required">Brief Experience Summary</label>
+          <textarea id="a-summary" name="summary" rows="5"
+                    placeholder="Summarize your relevant experience"
+                    required aria-required="true"
+                    minlength="20" maxlength="1000"></textarea>
         </div>
 
         <div class="form-row">
-          <button type="submit" class="btn">Submit Application</button>
+          <button type="submit" class="btn">Apply Now</button>
           <span id="apply-status" role="status" aria-live="polite" class="muted"></span>
         </div>
       </form>
     </article>
   </main>
 
-  
+  <!-- Footer -->
   <footer class="site-footer" role="contentinfo">
     <div class="container footer-inner">
-      <!-- Separator Line -->
       <hr class="footer-separator">
 
       <div class="footer-content">
@@ -88,7 +117,6 @@
 
         <div class="footer-right">
           <p><a href="references.html">References</a></p>
-          <!-- Social Media Icons -->
           <div class="social-links">
             <a href="https://facebook.com" target="_blank" aria-label="Facebook">
               <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" alt="Facebook" class="social-icon">
@@ -109,5 +137,9 @@
   </footer>
 
   <script src="scripts/script.js" defer></script>
+  <script>
+    // Auto update footer year
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
