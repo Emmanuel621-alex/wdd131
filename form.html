@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Submit a product review for items you have installed.">
+  <title>Product Review Form</title>
+  <link rel="stylesheet" href="styles/style.css">
+  <script defer src="scripts/form.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Product Review Form</h1>
+    <p>Please fill out the form below to share your feedback.</p>
+  </header>
+
+  <main>
+    <form method="get" action="review.html">
+      <!-- Product Name -->
+      <fieldset>
+        <legend>Product Information</legend>
+        <label for="productName">Product Name <span aria-hidden="true">*</span></label>
+        <select id="productName" name="productName" required>
+          <option value="" disabled selected>Select a Product ...</option>
+          <!-- Options inserted dynamically by JavaScript -->
+        </select>
+      </fieldset>
+
+      <!-- Overall Rating -->
+      <fieldset>
+        <legend>Overall Rating <span aria-hidden="true">*</span></legend>
+        <div class="rating-options">
+          <label><input type="radio" id="rating1" name="rating" value="1" required> ★</label>
+          <label><input type="radio" id="rating2" name="rating" value="2"> ★★</label>
+          <label><input type="radio" id="rating3" name="rating" value="3"> ★★★</label>
+          <label><input type="radio" id="rating4" name="rating" value="4"> ★★★★</label>
+          <label><input type="radio" id="rating5" name="rating" value="5"> ★★★★★</label>
+        </div>
+      </fieldset>
+
+      <!-- Date of Installation -->
+      <fieldset>
+        <legend>Date of Installation <span aria-hidden="true">*</span></legend>
+        <label for="installDate">Select Date:</label>
+        <input type="date" id="installDate" name="installDate" required>
+      </fieldset>
+
+      <!-- Useful Features -->
+      <fieldset>
+        <legend>Which features did you use? (Check all that apply)</legend>
+        <div class="check-options">
+          <label><input type="checkbox" id="feature1" name="features" value="speed"> Fast performance</label>
+          <label><input type="checkbox" id="feature2" name="features" value="design"> Modern design</label>
+          <label><input type="checkbox" id="feature3" name="features" value="support"> Customer support</label>
+          <label><input type="checkbox" id="feature4" name="features" value="security"> Security features</label>
+        </div>
+      </fieldset>
+
+      <!-- Written Review -->
+      <fieldset>
+        <legend>Written Review (Optional)</legend>
+        <label for="reviewText">Your Review:</label>
+        <textarea id="reviewText" name="reviewText" rows="4" placeholder="Write your review here..."></textarea>
+      </fieldset>
+
+      <!-- User Name -->
+      <fieldset>
+        <legend>User Information (Optional)</legend>
+        <label for="userName">Your Name:</label>
+        <input type="text" id="userName" name="userName" placeholder="Enter your name">
+      </fieldset>
+
+      <!-- Submit Button -->
+      <div class="form-actions">
+        <input type="submit" value="Submit Review">
+      </div>
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Emmanuel Edache Alexander, Nigeria</p>
+  </footer>
+
+  <script>
+    // Update year dynamically
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
